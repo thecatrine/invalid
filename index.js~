@@ -1,0 +1,22 @@
+import init from "./pkg/mazeweb.js"
+
+const runWasm = async () => {
+    const mazeweb = await init("./pkg/mazeweb_bg.wasm");
+
+    const wasmByteMemoryArray = new Uint8Array(mazeweb.memory.buffer);
+
+    // Get our canvas element from our index.html
+    const canvasElement = document.querySelector("canvas");
+
+    // Set up Context and ImageData on the canvas
+    const canvasContext = canvasElement.getContext("2d");
+    const canvasImageData = canvasContext.createImageData(
+	canvasElement.width,
+	canvasElement.height
+    );
+
+    // Clear the canvas
+    canvasContext.clearRect(0, 0, canvasElement.width, canvasElement.height);
+};
+
+runWasm();

@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <script type="module" src="./index.js"></script>
+    <canvas
+      width="640"
+      height="480"
+      style="image-rendering: pixelated; width:100%;" 
+      >
+    </canvas>
+  </body>
+</html>
