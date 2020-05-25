@@ -1,0 +1,15 @@
+{
+  "name": "mazeweb",
+  "collaborators": [
+    "cat"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "mazeweb_bg.wasm",
+    "mazeweb.js",
+    "mazeweb.d.ts"
+  ],
+  "module": "mazeweb.js",
+  "types": "mazeweb.d.ts",
+  "sideEffects": false
+}
