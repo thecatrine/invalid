@@ -51,11 +51,12 @@ function _assertNum(n) {
 * @param {number} px
 * @param {number} py
 * @param {number} angle
+* @param {number} angle_z
 */
-export function generate_board(px, py, angle) {
+export function generate_board(px, py, angle, angle_z) {
     _assertNum(px);
     _assertNum(py);
-    wasm.generate_board(px, py, angle);
+    wasm.generate_board(px, py, angle, angle_z);
 }
 
 function logError(f) {

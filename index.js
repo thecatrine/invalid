@@ -40,16 +40,18 @@ const runWasm = async () => {
 	canvasContext.putImageData(canvasImageData, 0, 0);
     };
 
-    drawBoard(150, 150, 0);
-
     var x = 150;
     var y = 150;
     var angle = 0;
 
+    var t = 0;
+    var angle_z = 0;
     setInterval(() => {
-	drawBoard(x, y, angle);
-	angle = angle + 0.05;
-    }, 3600/30);
+	drawBoard(x, y, angle, angle_z);
+	t+= 1
+	angle = angle + 0.05*t;
+	angle_z = Math.sin(0.05*t);
+    }, 1000);
 };
 
 runWasm();
